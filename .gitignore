@@ -35,24 +35,24 @@ MANIFEST
 
 # Virtual environments
 .env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
+/.venv
 
-# Data directory - exclude large files
-data/cityscapes/
-data/models/*.pth
-data/models/*.pkl
-data/preprocessed/
-data/raw/
-data/results/
+# Data directory - exclude all data files (but not src/data/)
+/data/
 
-# Keep essential files
-!data/README.md
-!data/models/README.md
+# Logs directory - exclude all log files
+logs/
 
-# 
-.github
+# Model checkpoints and training outputs
+*.pth
+*.pkl
+*.pt
+
+# Results directory - but keep structure
+/results/
+
+# Keep essential documentation
+!README.md
+
+# Ignore .github directory
+.github/
